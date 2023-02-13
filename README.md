@@ -1,4 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Login and Registration UI
+
+## Objectives
+
+Build UI Interface for REST API
+
+## Tech Stack
+
+- React
+- Next.js
+- TypeScript
+- JWT's
+- Refresh tokens
+- Cookies
+
+## Dependencies
+
+- axios
+- swr
+- react-hook-form
+- zod
+- @hookform/resolvers
+
+## Pages
+
+- auth/register
+- auth/login
+
+---
+
+## This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
