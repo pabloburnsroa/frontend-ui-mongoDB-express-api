@@ -3,6 +3,7 @@ import { object, string } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import axios from 'axios';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 const createUserSchema = object({
   name: string({
@@ -30,6 +31,7 @@ type Inputs = {
 };
 
 const RegisterPage = () => {
+  const router = useRouter();
   const [registerError, setRegisterError] = useState(null);
 
   const {
@@ -46,6 +48,7 @@ const RegisterPage = () => {
         `${process.env.NEXT_PUBLIC_SERVER_ENDPOINT}/api/users`,
         data
       );
+      router.push('/');
     } catch (e: any) {
       setRegisterError(e.message);
     }
