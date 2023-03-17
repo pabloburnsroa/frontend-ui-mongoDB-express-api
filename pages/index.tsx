@@ -2,6 +2,7 @@ import useSWR from 'swr';
 import styles from '@/styles/Home.module.css';
 import fetcher from '../utils/fetcher';
 import { GetServerSideProps } from 'next';
+import getGoogleOAuthURL from '../utils/getGoogleOAuthURL';
 
 interface User {
   _id: string;
@@ -21,11 +22,24 @@ export default function Home({ fallbackData }: { fallbackData: User }) {
     fetcher,
     { fallbackData }
   );
+  console.log({ data });
 
   if (data) {
-    return <div>Welcome, {data.name}</div>;
+    return (
+      <div>
+        <h1>Welcome, {data.name}</h1>
+        <br />
+        <a href="">Logout</a>
+      </div>
+    );
   }
-  return <div>Please login</div>;
+  return (
+    <div>
+      <a href={getGoogleOAuthURL()}>Login with Google</a>
+      <br />
+      `` Please login
+    </div>
+  );
 }
 
 // Render index page on the server

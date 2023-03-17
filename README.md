@@ -28,6 +28,13 @@ Build UI Interface for REST API
 
 ---
 
+## Implementing Google OAuth Authentication
+
+1. Build the OAuth consent screen
+2. 
+
+---
+
 ## This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
